@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheetal Ramesh | Full Stack Developer</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    .dark-mode {
+      background: #121212;
+      color: #e0e0e0;
+    }
+    .hero {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      animation: fadeSlide 1s ease-in-out;
+    }
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+      color: #2c3e50;
+      border-bottom: 3px solid #ffbd39;
+      display: inline-block;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: -10px;
+      left: 0;
+      background-color: #ffbd39;
+      transition: width 0.5s;
+    }
+    .section-title:hover::after {
+      width: 100%;
+    }
+    .btn-warning {
+      background-color: #ffbd39;
+      border: none;
+    }
+    .btn-outline-light {
+      border-color: #fff;
+      color: #fff;
+      transition: transform 0.3s ease;
+    }
+    .btn-outline-light:hover {
+      background-color: #ffbd39;
+      color: #2c3e50;
+      border-color: #ffbd39;
+      transform: scale(1.05);
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    img.img-fluid {
+      transition: transform 0.4s ease;
+    }
+    img.img-fluid:hover {
+      transform: scale(1.05);
+    }
+    .btn {
+      transition: transform 0.3s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    .navbar {
+      transition: box-shadow 0.3s ease;
+    }
+    .navbar.scrolled {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+.toggle-theme {
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin-left: 15px;
+    }
+
+    /* Dark mode heading color */
+    .dark-mode .section-title {
+      color: #ffbd39;
+      border-bottom-color: #fff176;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);">
+  <div class="container">
+    <a class="navbar-brand text-white font-weight-bold" href="#">Sheetal Ramesh</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#internship">Internship & Training</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#achievements">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+        <li class="nav-item toggle-theme text-white" onclick="toggleTheme()">🌙</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="padding-top: 70px;"></div>
+<section class="hero">
+  <div class="container">
+    <h1 class="display-4">Hi, I'm <strong>Sheetal Ramesh</strong></h1>
+    <p class="lead">Full Stack Developer | React.js | MongoDB | SAP ABAP | Python</p>
+    <a href="https://drive.google.com/file/d/14LPHko_ogDJgFK2QUEbWAT0MMuc3Tqwq/view?usp=drive_link" target="_blank" class="btn btn-outline-light btn-lg">View / Download Resume</a>
+  </div>
+</section>
+
+<section id="about" class="container py-5" data-aos="fade-up">
+  <h2 class="section-title">About Me</h2>
+  <div class="row align-items-center">
+    <div class="col-md-4 text-center mb-3">
+      <img src="images/profile.jpg" alt="Sheetal Ramesh" class="img-fluid rounded-circle shadow" style="max-width: 250px;">
+    </div>
+    <div class="col-md-8">
+      <p>I am a B.Tech student at Presidency University, Bangalore (graduating 2025), passionate about full stack development, AI integration, and cyber safety.</p>
+      <p>I’ve built platforms like Billy Buddy to tackle cyberbullying and published research papers in IRJET and IJSREM. I am skilled in C, Python, ABAP, SQL, and React.js and have completed a certified Full Stack Development course and internship at Skolar.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="container py-5" data-aos="fade-right">
+  <h2 class="section-title">Skills</h2>
+  <ul>
+    <li>Languages: C, Python, ABAP, SQL, NoSQL</li>
+    <li>Tools: Google Colab, VS Code, Jupyter, Hadoop, WEKA, SAP S/4 HANA</li>
+    <li>Frameworks: React.js, Express.js</li>
+    <li>Databases: MongoDB, MySQL</li>
+  </ul>
+</section>
+
+<section id="projects" class="container py-5" data-aos="fade-left">
+  <h2 class="section-title">Projects & Published Papers</h2>
+  <div class="row">
+    <div class="col-md-6 mb-4" data-aos="zoom-in">
+      <h4>Billy Buddy Against Cyberbullying</h4>
+      <img src="images/img1.jpg" alt="Billy Buddy Project Image 1" class="img-fluid mb-2">
+      <p>AI-powered full-stack platform to report and prevent cyberbullying. Built with React.js, Dialogflow, and MongoDB/MySQL.</p>
+      <p>
+        📄 <a href="https://www.irjet.net/archives/V12/i1/IRJET-V12I145.pdf" target="_blank">Published Paper (IRJET)</a><br>
+        📜 <a href="https://drive.google.com/file/d/1PL_6aSSJcOzKoeJFBwHyfdlvkW28KvQF/view?usp=sharing" target="_blank">View Certificate</a>
+      </p>
+      <button class="btn btn-primary" onclick="toggleImages('billy-images')">View More Images</button>
+      <div id="billy-images" style="display:none;" class="mt-3">
+        <img src="images/img3.jpg" alt="Billy Buddy Project Image 2" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4" data-aos="zoom-in">
+      <h4>Analysis of Malicious Mobile Applications</h4>
+      <img src="images/imgs.png" alt="Mobile App Analysis Image 1" class="img-fluid mb-2">
+      <p>Developed a mobile app analysis tool using OSINT to detect suspicious behaviour and improve user safety.</p>
+      <p>
+        📄 <a href="https://drive.google.com/file/d/1S1smV9mViH_MWq8IvzQ7ClRSDGIQbIKI/view?usp=sharing" target="_blank">Published Paper (IJSREM)</a><br>
+        📜 <a href="https://drive.google.com/file/d/1UpPY9euUXlejrXwCz_V0mWZ2_RFI1D7i/view?usp=sharing" target="_blank">View Certificate</a>
+      </p>
+      <button class="btn btn-primary" onclick="toggleImages('app-images')">View More Images</button>
+      <div id="app-images" style="display:none;" class="mt-3">
+        <img src="images/image.png" alt="Mobile App Analysis Image 2" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="internship" class="container py-5" data-aos="fade-up">
+  <h2 class="section-title">Internship & Training</h2>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <h5><strong>Full Stack Development Course – Skolar</strong></h5>
+      <p>Completed a certified Full Stack Web Development course from <strong>Skolar</strong> on <strong>April 30, 2024</strong>. This course (Certificate No: CC24-5780) provided in-depth training on front-end (HTML, CSS, JavaScript, React.js) and back-end technologies (Node.js, Express.js, MongoDB, MySQL).</p>
+      <p>📜 <a href="https://drive.google.com/file/d/1McJJc8jwyo029qNda7-5kAUmQqRzff4v/view?usp=sharing" target="_blank">View Course Completion Certificate</a></p>
+    </div>
+    <div class="col-md-6 mb-4">
+      <h5><strong>Internship Training – Skolar</strong></h5>
+      <p>Interned at <strong>Skolar</strong> from <strong>Feb – Apr 2024</strong>. Worked on full-stack projects and Agile methodologies.</p>
+      <p>📜 <a href="https://drive.google.com/file/d/1AtO8ofrme-_EkMq8im-5E4rObEoSICRU/view?usp=sharing" target="_blank">View Internship & Training Certificate</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="achievements" class="container py-5" data-aos="fade-right">
+  <h2 class="section-title">Achievements</h2>
+  <ul>
+    <li>Published 2 research papers (IRJET, IJSREM)</li>
+    <li>Certified in Python and Problem Solving – HackerRank<br>
+      📜 <a href="https://drive.google.com/file/d/13EjAilcA1sETS97kq8IurWdjJSQUgbMw/view?usp=sharing" target="_blank">Python Certificate</a><br>
+      📜 <a href="https://drive.google.com/file/d/1V289UmtakJAS6DfrvHxIa0WxB_RsSG5H/view?usp=sharing" target="_blank">Problem Solving Certificate</a>
+    </li>
+    <li>Completed Deloitte Data Analytics Job Simulation – Forage<br>
+	📜 <a href="https://drive.google.com/file/d/1Q53hDW8Jg_5E4NAJ2R1empvvZmlHjHdH/view?usp=sharing" target="_blank">View Certificate</a></li>
+    <li>Language Learning: German (A1 level)</li>
+  </ul>
+</section>
+
+<section id="education" class="container py-5" data-aos="fade-left">
+  <h2 class="section-title">Education</h2>
+  <ul>
+    <li>B.Tech, Presidency University, Bangalore – 2025</li>
+    <li>XII – St. Anne's PU for Girls – 2021</li>
+    <li>X – St. Joseph Convent Girls High School – 2019</li>
+  </ul>
+</section>
+
+<section id="contact" class="container py-5" data-aos="zoom-in">
+  <h2 class="section-title">Contact</h2>
+  <ul>
+    <li>Email: <a href="mailto:sheetalrameshr@gmail.com">sheetalrameshr@gmail.com</a></li>
+    <li>Phone: 9606629079</li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/sheetalrameshr">linkedin.com/in/sheetalrameshr</a></li>
+    <li>Address: Frazer Town, Bangalore, Karnataka 560005</li>
+  </ul>
+</section>
+<footer>
+  <p>&copy; <script>document.write(new Date().getFullYear())</script> Sheetal Ramesh. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleImages(id) {
+    const container = document.getElementById(id);
+    container.style.display = (container.style.display === 'none') ? 'block' : 'none';
+  }
+
+  function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  window.onload = function () {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
